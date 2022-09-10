@@ -37,7 +37,7 @@ Its also a step-by-step guide.
 
 
 
-#### 3.	Sending Telemetry to the thingsboard demo server via HTTPS protocol
+#### Sending Telemetry to the thingsboard demo server via HTTPS protocol
 -	For this we will be using the ‘os’ and ‘subprocess’ libraries. These libraries are built-in in python.
 -	Head to PyCharm, Create a Project.
 -	Expand the python interpreter option.
