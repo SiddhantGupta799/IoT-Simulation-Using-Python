@@ -44,7 +44,7 @@ Its also a step-by-step guide.
 -	Select the virtual env, PyCharm will automatically find the Python3 interpreter installed on the PC. Hit ‘Create’.
 -	Next import os library and import subprocess library, also import ‘pyautogui’ PyCharm will show an error as this file doesn’t exist so right click and show context actions and then install the module from there.
 
-```http
+```
 import os
 import subprocess
 import pyautogui
@@ -53,7 +53,7 @@ import time
 
 - Define a make_json_function () which will return a json string populated with the current mouse pointer position, every time it’s called.
 
-```http
+```
 def make_json():
     """ here we will fetch the current mouse pointer position using the pyautogui module
     and then will make a json string out of it. """
@@ -64,14 +64,14 @@ def make_json():
 - Go to thingsboard and copy the device access token.
 -	Fill the access token in the device_access_key variable.
 
-```http
+```
 os.chdir("C:/Program Files/Mosquitto")
 device_access_key = DEVICE_ACCESS_KEY
 server = "demo.thingsboard.io"
 ```
 - write the following script
 
-```http
+```
 for i in range(200):
     command = "mosquitto_pub -d -q 1 -h \"" + server + "\" -t " \
                 "\"v1/devices/me/telemetry\" -u \"" + device_access_key + "\" -m " + make_json()
